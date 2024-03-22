@@ -1,0 +1,9 @@
+# Docs: https://caddyserver.com/docs/caddyfile
+VirtualWebEnv.test {
+    root * /var/www/public
+    php_fastcgi php-fpm:9000
+    file_server
+
+    encode zstd gzip
+    tls internal
+}
